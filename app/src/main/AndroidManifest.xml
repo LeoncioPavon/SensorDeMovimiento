@@ -3,13 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="ni.edu.uca.sensordemovimiento">
 
+    <!---Permiso para el contador de pasos (Actividad física)-->
+
     <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION"/>
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_syscolor"
-        android:label="@string/app_name"
+        android:label="Step Counter"
         android:roundIcon="@mipmap/ic_syscolor_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SensorDeMovimiento"
