@@ -1,74 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#D4E4F8"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <!---Barra de progreso extraída de la librería de Mikhael Lopez
      https://github.com/lopspower/CircularProgressBar -->
 
-    <TextView
-        android:id="@+id/Bienvenida"
-        android:layout_width="211dp"
-        android:layout_height="104dp"
-        android:layout_above="@+id/ProgessBar"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="104dp"
-        android:layout_marginTop="94dp"
-        android:layout_marginEnd="96dp"
-        android:layout_marginBottom="68dp"
-        android:fontFamily="sans-serif"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="System Color Step Counter"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="30sp"
-        android:textStyle="bold" />
+        android:orientation="horizontal">
 
-    <com.mikhaellopez.circularprogressbar.CircularProgressBar
-        android:id="@+id/ProgessBar"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_centerInParent="true"
-        app:cpb_background_progressbar_color="#F2F2F2"
-        app:cpb_background_progressbar_width="20dp"
-        app:cpb_progress_direction="to_right"
-        app:cpb_progress_max="2500"
-        app:cpb_progressbar_color="#F44336"
-        app:cpb_progressbar_width="15dp"
-        app:cpb_round_border="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:fontFamily="cursive"
+            android:text="System Color"
+            android:textColor="#000"
+            android:textSize="30dp"
+            android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/tv_stepsTaken"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="0"
-        android:textColor="@color/black"
-        android:textSize="40sp"
-        android:textStyle="bold"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:fontFamily="cursive"
+            android:text="Step Counter"
+            android:textColor="#000"
+            android:textSize="30dp"
+            android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/MaxSteps"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/tv_stepsTaken"
-        android:layout_centerInParent="true"
-        android:text="/2500"
-        android:textColor="@color/black"
-        android:textSize="14sp"
-        android:textStyle="bold" />
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_gravity="center"
+        android:innerRadius="0dp"
+        android:shape="ring"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="110dp"
+        app:cardElevation="6dp"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="77dp"
+                android:layout_height="82dp"
+                android:src="@drawable/run" />
+
+            <TextView
+                android:id="@+id/tv_stepsTaken"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="#3D6CFC"
+                android:textSize="30dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Steps Count" />
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
 
     <Button
         android:id="@+id/btnResetSteps"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/ProgessBar"
         android:layout_centerInParent="true"
+        android:layout_gravity="center"
         android:layout_marginTop="55dp"
         android:text="Reset Steps"
         android:textColor="@color/white"
@@ -76,4 +96,5 @@
         android:textStyle="bold"
         app:cornerRadius="20dp" />
 
-</RelativeLayout>
+
+</LinearLayout>
