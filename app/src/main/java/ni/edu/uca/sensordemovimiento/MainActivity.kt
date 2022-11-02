@@ -82,7 +82,7 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
         }
     }
 
-    //Funcion para rresetear los pasos
+    //Funcion para resetear los pasos
     private  fun resetSteps(){
         //Si el botón de resetar los pasos es pulsado, se mostrará el siguiente mensaje
         btnResetSteps.setOnClickListener{
@@ -123,12 +123,12 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
     private fun loadData(){
         //Acá se implemente nuevamente la preferencia anterior
         val sharedPreferences = getSharedPreferences("myPrefs", Context.MODE_PRIVATE)
-        /*Creamos una variable para y se igualará a nuestras p[referencias compartidas
+        /*Creamos una variable para y se igualará a nuestras preferencias compartidas
         * Agregamos la llave de indentificador
         */
         val savedNumber  = sharedPreferences.getFloat("key1", 0f)
         /*Simplificamos el registro del número de esta manera lo que guardará el número y se monstrará en
-          el inicio de la ap
+          el inicio de la app
          */
         Log.d("MainActivity", "$savedNumber")
         //Los pasos totales anteriores pasan a ser la variable de número guardado
