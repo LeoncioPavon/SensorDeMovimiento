@@ -44,6 +44,4 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
-    //Implementación de librería para el uso de la barra de progreso
-    implementation 'com.mikhaellopez:circularprogressbar:3.1.0'
 }
