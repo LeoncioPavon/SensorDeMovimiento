@@ -1,4 +1,4 @@
-# SensorDeMovimiento
+# Step Counter
 -Investigación sobre sensores para la clase DAMO1.
 
 
