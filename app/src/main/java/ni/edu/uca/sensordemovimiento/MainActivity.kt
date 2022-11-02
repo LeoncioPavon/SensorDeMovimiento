@@ -59,10 +59,10 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
           empezar a registrar los pasos
          */
         } else {
-            /*El contexto es el sensor de pasos y el administrador de sensores con Delay (retraso)
-              para que el sensor lo registre lentamente
+            /*El contexto es el sensor de pasos y el administrador de sensores con velocidad de
+             registro normal
              */
-            sensorManager?.registerListener(this, stepSensor, SensorManager.SENSOR_DELAY_UI)
+            sensorManager?.registerListener(this, stepSensor, SensorManager.SENSOR_DELAY_NORMAL)
         }
     }
 
@@ -79,10 +79,6 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
             //Acá tendremos una vista de nuestros pasos actules
             tv_stepsTaken.text = ("$currentSteps")
 
-            //Animación a la barra de progreso en función de los pasos actuales
-            ProgessBar.apply {
-                setProgressWithAnimation(currentSteps.toFloat())
-            }
         }
     }
 
